@@ -56,6 +56,33 @@
         </section>
 
     </form>
+
+     <form action="" method="get">
+        <%let count = 0; for(let i of task){%>
+        <div>
+            <hr>
+            <div>
+                <label for="<%=i.Description%>">
+                    <%=i.Description%>
+                </label>
+                <a href="/delete-but/?id=<%=i._id%>">
+                    <i class="fa-solid fa-trash-can"></i>
+                </a>
+                <div><i class="fas fa-calendar-alt"></i>
+                     <%if(i.DDate==null){%>
+                    <%="No Deadline"%> <%}else{%> <%=i.DDate%> <%}%>
+                </div>
+                <div class="logo btn position-absolute btn-primary disabled">
+                    <%=i.Category%>
+                </div>
+            </div>
+        </div>
+        <%count++;}%>
+
+        <div>
+            <h3>Total task to do:<%=count%></h3>
+        </div>
+    </form>
         
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

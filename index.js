@@ -17,7 +17,7 @@ const path = require('path');
 const port  = 8000;
 
 // using routes to direct url
-app.use('/',require('./routes'));
+// app.use('/',require('./routes'));
 
 // setting ejs as view engine
 app.set('view engine','ejs');
@@ -44,6 +44,40 @@ app.post('/create-task',function(req,res)
         res.redirect('back');
    });
 });
+
+app.get('/',function(req,res)
+{
+   Todo.find({},function(err,task)
+   {
+      if(err)
+      {
+         console.log(`error in fetching data from data base: ${err}`)
+         return;
+      }
+      
+      return res.render('home',{
+         title:"Todo list",
+         task: task
+      });
+
+   });
+});
+
+app.get('/delete-but',function(req,res)
+{ 
+   let id = req.query.id;
+   Todo.findByIdAndDelete(id,function(err)
+   {
+      if(err)
+      {
+         console.log(`error in deleting task: ${err}`);
+         return;
+      }
+
+      return res.redirect('back');
+   });
+});
+
 
 app.listen(port,function(err)
 {
