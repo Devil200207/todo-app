@@ -16,8 +16,7 @@ const path = require('path');
 // setting port on which server will run
 const port  = 8000;
 
-// using routes to direct url
-// app.use('/',require('./routes'));
+app.use(express.static('assest'));
 
 // setting ejs as view engine
 app.set('view engine','ejs');
@@ -40,7 +39,6 @@ app.post('/create-task',function(req,res)
         console.log(`error in making new todo: ${err}`);
         return;
      }
-        console.log('****',newTodo);
         res.redirect('back');
    });
 });

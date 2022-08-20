@@ -8,7 +8,7 @@ const TodoSchema = new mongoose.Schema({
         type:String
     },
     DDate:{
-       type:Date
+       type:Object
     }
 });
 

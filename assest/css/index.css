@@ -1,0 +1,136 @@
+#heading
+{
+    margin-top: 30px;
+    text-align: center;
+    font-family: cursive;
+}
+
+#hr-1
+{
+    margin-top: 50px;
+}
+
+/* section-1 */
+
+#form-1 #section-1 label
+{
+    margin-left: 20px;
+}
+
+#form-1 #section-1 textarea
+{
+    border: none;
+    resize: none;
+    outline: none;
+    overflow: auto;
+    height: 40px;
+    min-width: 250px;
+    margin-left: 20px;
+}
+
+/* section-2 */
+
+#section-2 label
+{
+    margin-left: 20px;
+}
+
+.form-select
+{
+    margin-top: 2px;
+    margin-left: 20px;
+    width: 16% !important;
+}
+
+#section-2 .vertical-line
+{
+    position: relative;
+    height: 115px;
+    width: 1px;
+    background-color: black;
+    margin-left: 45%;
+    top: -81px;
+}
+
+#section-2 #date-pic
+{
+    position: relative;
+    margin-left: 55%;
+    top: -180px;
+    outline: none;
+}
+
+#hr-2
+{
+    position: relative;
+    top: -150px;
+}
+
+/* adding button */
+#add-del-but button
+{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+    position: relative;
+    left: 41%;
+    top: -125px;
+}
+
+/* form-2 */
+
+#form-2
+{
+    position: relative;
+    top: -100px;
+}
+
+#form-2 #info-dis #m-info
+{
+    display: flex;
+}
+#form-2 #info-dis #dis-view
+{
+    margin-left: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#form-2 #info-dis #cat-but
+{
+    position: relative;
+    left: 50%;
+    background-color: rgb(245, 173, 0);
+    font-weight: bold;
+    width: 100px;
+}
+
+#form-2 #info-dis #del-but
+{
+    position: relative;
+    left: 80%;
+    top: 11px;
+}
+
+#form-2 #info-dis #del-but a
+{
+    color: red;
+}
+
+#form-2 #info-dis #d-t-dis
+{
+    margin-top: 10px;
+    margin-left: 20px;
+    font-weight: lighter;
+}
+
+#cnt
+{
+    text-decoration: underline red;
+}
+
+/* common */
+label
+{
+    font-weight: bold;
+    text-transform: uppercase;
+}
