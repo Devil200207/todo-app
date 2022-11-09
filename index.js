@@ -14,7 +14,7 @@ const app = express();
 const path = require('path');
 
 // setting port on which server will run
-const port  = 8000;
+const port  = process.env.PORT;
 
 app.use(express.static('assest'));
 
